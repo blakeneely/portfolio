@@ -1,3 +1,4 @@
+/* Universal */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   line-height: 1.5;
+  background-color: #fafafa;
 }
 
 h1,
@@ -18,6 +20,11 @@ h3 {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
@@ -25,7 +32,48 @@ a {
   margin: auto;
   padding: 0 2em;
 }
+
+/* Resume Modal */
+
+.resume-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.637);
+}
+
+.modal-content {
+  max-width: 670px;
+  margin: auto;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+iframe {
+  margin: auto;
+  display: block;
+}
+
+.closeBtn {
+  font-size: 30px;
+  color: #09b2e4;
+  float: right;
+  cursor: pointer;
+}
+
+.closeBtn:hover,
+.closeBtn:focus,
+.closeBtn:active {
+  color: red;
+}
+
 /* Header and Nav */
+
 .header {
   max-height: 450px;
   width: 100%;
@@ -75,6 +123,7 @@ nav img {
 }
 
 /* Headshot */
+
 .headshot-card {
   margin: auto;
   max-width: 300px;
@@ -116,6 +165,7 @@ nav img {
 }
 
 /* About */
+
 .about {
   background: linear-gradient(to right top, #09b2e4, #8cdaf1);
   color: #fafafa;
@@ -129,10 +179,99 @@ nav img {
   font-size: 1.2rem;
 }
 
+/* Projects */
+
 .projects {
-  background-color: #fafafa;
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0)
+  );
+  box-shadow: 6px -6px 30px rgba(122, 122, 122, 0.445);
+  backdrop-filter: blur(0.5rem);
   margin: auto;
   position: relative;
   margin-top: -70px;
   border-radius: 25px;
+}
+
+.projects-title h1 {
+  color: #333;
+}
+
+.project-summary h1,
+.project-technologies h2 {
+  color: #09b2e4;
+}
+
+.projects-title {
+  padding: 1em 0;
+}
+
+.project-summary p {
+  text-align: center;
+}
+
+.project-slide {
+  display: flex;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1em;
+}
+
+.project-details {
+  display: flex;
+  padding: 1em;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-links a {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.project-links a:hover,
+.project-links a:focus,
+.project-links a:active {
+  background-color: #09b2e4;
+  color: #333;
+}
+
+.btn {
+  background-color: #333;
+  color: #fafafa;
+}
+
+.project-image {
+  max-width: 600px;
+  flex: 1;
+  align-self: center;
+}
+
+.project-image img {
+  height: auto;
+  width: 100%;
+}
+
+footer {
+  padding: 3em;
+  text-align: center;
+}
+
+/* Keryframes */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

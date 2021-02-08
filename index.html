@@ -18,7 +18,19 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+
   <body>
+    <!-- Resume Modal -->
+    <div class="resume-modal" id="resumeModal">
+      <div class="modal-content">
+        <span class="closeBtn">&times;</span>
+        <iframe
+          src="assets/images/BlakeNeely-resume.pdf"
+          style="width: 640px; height: 800px"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
     <!-- Header -->
     <div class="header">
       <!-- Navbar -->
@@ -27,7 +39,7 @@
           <img src="assets/images/neelymedialogo.png" alt="neely media logo" />
         </div>
         <div>
-          <a href="#">Resume</a>
+          <a class="resume-link" id="resumeLink">Resume</a>
           <a href="#">Contact</a>
         </div>
       </nav>
@@ -84,14 +96,395 @@
       <div class="projects-title">
         <h1>Recent Projects:</h1>
       </div>
+      <div class="projects-slider container">
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>React Weather</h1>
+              <p>
+                Using an API call to
+                <a href="https://openweathermap.org/" target="_blank"
+                  >Open Weather</a
+                >
+                and mix in some wonderfully crafted weather icons from
+                <a
+                  href="https://erikflowers.github.io/weather-icons/"
+                  target="_blank"
+                  >Erik Flowers</a
+                >, React Weather is a beautiful app to grab the weather
+                conditions across the globe. Just enter a city and country and
+                watch as the weather updates below!
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>React</li>
+                  <li>Bootstrap</li>
+                  <li>Node.js</li>
+                  <li>Open Weather API</li>
+                  <li>Weather Icons</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://blakeneely.github.io/react-weather/"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/react-weather"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="assets/images/weather_group.png" alt="React Weather" />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>Google Books Search</h1>
+              <p>
+                A full stack app built with React and React-router, Google Book
+                Search is a great app to store any books you love from Google
+                Books! Just search for any book you want, if you find it's
+                something you want to buy just click the view button to launch
+                Google Books. If you love it and want to save it to your
+                collection just click the save button!
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>React</li>
+                  <li>React-router</li>
+                  <li>Bootstrap</li>
+                  <li>Express.js</li>
+                  <li>MongoDB</li>
+                  <li>Node.js</li>
+                  <li>Axios</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://immense-depths-52318.herokuapp.com/"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/google_books"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img
+              src="assets/images/google-books-group.png"
+              alt="Google Books Search"
+            />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>
+                Star Wars<sup><small>&copy</small></sup> Clicky Game
+              </h1>
+              <p>
+                Test your memory with this Star Wars clicky game! When the page
+                loads, start by clicking any image. Try not to click the same
+                image more than once, the images will randomize after every
+                click. Follow your score in the right corner. Click through all
+                of the images to win.
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>React</li>
+                  <li>Bootstrap</li>
+                  <li>HTML & CSS</li>
+                  <li>Javascript</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="http://blakeneely.github.io/clicky-game/"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/clicky-game"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img
+              src="assets/images/clicky-game-group.png"
+              alt="Star Wars Clicky Game"
+            />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>Tech Feed</h1>
+              <p>
+                Using Cheerio to scrape from some of the most popular tech
+                blogs, TechFeed grabs the top stories of the day and displays
+                them in one easy location. Any article you find that you like to
+                keep for later just click the "Save Later" button.
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>HTML & CSS</li>
+                  <li>Javascript</li>
+                  <li>Bootstrap</li>
+                  <li>MongoDB</li>
+                  <li>Node.js</li>
+                  <li>Cheerio</li>
+                  <li>Express.js</li>
+                  <li>Handlebars</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://blakeneely-techfeed.herokuapp.com/"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/getnews"
+                  target="_blank"
+                >
+                  <span class="icon is-medium">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="assets/images/techfeed-group.png" alt="Tech Feed" />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>Binge</h1>
+              <p>
+                Binge is a full stack movie search and save to watch later web
+                app. You can search by movie title or search for specific
+                actors. Whenever you find a movie you're interested in you can
+                click on it to read the plot, see the actors and directors and
+                watch the trailer or save it to check out later!
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>Bulma</li>
+                  <li>jQuery</li>
+                  <li>AJAX</li>
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                  <li>Node.js</li>
+                  <li>mySQL</li>
+                  <li>Handlebars.js</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://sleepy-waters-84015.herokuapp.com/"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/binge"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="assets/images/binge-group.png" alt="Binge Movie Search" />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>Huddle</h1>
+              <p>
+                Using APIs from ESPN and Mysportsfeed, Huddle is a fully
+                mobile-responsive app for trending NFL news and player stats
+                with all of the clutter remvoved. Search for up to date player
+                statistics or simply check out the trending top stories around
+                the league.
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>HTML5 & CSS</li>
+                  <li>Bulma</li>
+                  <li>Javascript</li>
+                  <li>Node.js</li>
+                  <li>jQuery</li>
+                  <li>AJAX</li>
+                  <li>Firebase</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://blakeneely.github.io/project1"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/project1"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img
+              src="assets/images/huddle-group.png"
+              alt="Huddle Football Search"
+            />
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="project-slide">
+          <div class="project">
+            <div class="project-summary">
+              <h1>Giftastic</h1>
+              <p>
+                Giftastic is a mobile-responsive searchable gif app using
+                GIPHY's API. Click the buttons to load top gifs, use the search
+                box to add more buttons of your choice!
+              </p>
+            </div>
+            <div class="project-details">
+              <div class="project-technologies">
+                <h2>Technologies:</h2>
+                <ul>
+                  <li>HTML5 & CSS</li>
+                  <li>Bootstrap</li>
+                  <li>Javascript</li>
+                  <li>Node.js</li>
+                  <li>jQuery</li>
+                  <li>AJAX</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a
+                  class="btn"
+                  href="https://blakeneely.github.io/giftastic"
+                  target="_blank"
+                >
+                  Live look
+                </a>
+                <a
+                  class="btn"
+                  href="https://github.com/blakeneely/giftasti"
+                  target="_blank"
+                >
+                  <span class="icon">
+                    <i class="fab fa-github git-icon"></i>
+                  </span>
+                  &ltcode&gt
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-image">
+            <img
+              src="assets/images/giftastic-group.png"
+              alt="Giftastic Gif Search"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
-    <div class="project"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Neely Media &copy</p>
+      </div>
+    </footer>
   </body>
-  <script src="./assets/javascript/app.js"></script>
+  <script src="./assets/javascript/script.js"></script>
 </html>
