@@ -1,4 +1,5 @@
-const modal = document.getElementById('resumeModal'),
+const body = document.querySelector('body'),
+  modal = document.getElementById('resumeModal'),
   modalBtn = document.getElementById('resumeLink'),
   closeBtn = document.getElementsByClassName('closeBtn')[0],
   slider = document.querySelector('.projects-slider'),
@@ -23,11 +24,13 @@ window.addEventListener('click', outsideClick);
 // Function to open resume modal
 function openModal() {
   modal.style.display = 'block';
+  body.style.overflow = 'hidden';
 }
 
 // Function to close resume modal
 function closeModal() {
   modal.style.display = 'none';
+  body.style.overflow = 'visible';
 }
 
 // Function to close resume modal with outside click
