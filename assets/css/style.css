@@ -218,6 +218,29 @@ nav img {
   cursor: grab;
 }
 
+.slider-pagination {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+.slider-pagination span {
+  /* font-size: 1.5em; */
+  color: #09b2e4;
+  user-select: none;
+  cursor: default;
+  padding: 0.5em;
+}
+
+.left,
+.right {
+  color: rgb(104, 102, 102);
+  cursor: pointer;
+  font-size: 2em;
+}
+
 .projects-slider {
   display: inline-flex;
   overflow: hidden;
@@ -260,7 +283,7 @@ nav img {
 
 .project-summary,
 .project-details {
-  max-width: 900px;
+  max-width: 930px;
 }
 
 .projects-title {

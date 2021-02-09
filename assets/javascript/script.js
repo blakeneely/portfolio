@@ -3,7 +3,9 @@ const body = document.querySelector('body'),
   modalBtn = document.getElementById('resumeLink'),
   closeBtn = document.getElementsByClassName('closeBtn')[0],
   slider = document.querySelector('.projects-slider'),
-  slides = Array.from(document.querySelectorAll('.project-slide'));
+  slides = Array.from(document.querySelectorAll('.project-slide')),
+  leftArrow = document.getElementById('leftArrow'),
+  rightArrow = document.getElementById('rightArrow');
 
 let isDragging = false,
   startPosition = 0,
@@ -13,7 +15,6 @@ let isDragging = false,
   currentIndex = 0;
 
 //   Event listeners for slider
-
 slides.forEach((slide, index) => {
   const slideImage = slide.querySelector('img');
   slideImage.addEventListener('dragstart', (e) => e.preventDefault());
@@ -30,12 +31,28 @@ slides.forEach((slide, index) => {
   slide.addEventListener('mousemove', touchMove);
 });
 
-//   Disable context menu
+// Event listener for slide pagination
+leftArrow.addEventListener('click', clickLeft);
+rightArrow.addEventListener('click', clickRight);
+
+//  Disable context menu
 window.oncontextmenu = function (event) {
   event.preventDefault();
   event.stopPropagation();
   return false;
 };
+
+// Function to move slides left when left arrow clicked
+function clickRight() {
+  if (currentIndex < slides.length - 1) currentIndex += 1;
+  setPositionByIndex();
+}
+
+// Function to move slides left when right arrow clicked
+function clickLeft() {
+  if (currentIndex > 0) currentIndex -= 1;
+  setPositionByIndex();
+}
 
 // function to move slider when touching starts
 function touchStart(index) {
@@ -65,7 +82,7 @@ function touchEnd() {
   slider.classList.remove('grabbing');
 }
 
-// function to move slider whn touching is moving
+// function to move slider when touching is moving
 function touchMove(event) {
   if (isDragging) {
     const currentPosition = getPositionX(event);
