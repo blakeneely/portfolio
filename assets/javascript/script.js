@@ -12,6 +12,8 @@ let isDragging = false,
   animationID = 0,
   currentIndex = 0;
 
+//   Event listeners for slider
+
 slides.forEach((slide, index) => {
   const slideImage = slide.querySelector('img');
   slideImage.addEventListener('dragstart', (e) => e.preventDefault());
@@ -47,7 +49,7 @@ function touchStart(index) {
   };
 }
 
-// function to end slider whn touching stops
+// function to end slider when touching stops
 function touchEnd() {
   isDragging = false;
   cancelAnimationFrame(animationID);
