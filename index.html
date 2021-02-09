@@ -29,7 +29,7 @@
         </div>
         <div>
           <a class="resume-link" id="resumeLink">Resume</a>
-          <a href="#">Contact</a>
+          <a id="contactLink">Contact</a>
         </div>
       </nav>
 
@@ -87,7 +87,7 @@
       </div>
       <div class="slider-pagination">
         <span class="left" id="leftArrow">&lt;</span>
-        <span class="project1" id="projectOne">&#9675;</span>
+        <span class="project1" id="projectOne">&#9679;</span>
         <span class="project2" id="projectTwo">&#9679;</span>
         <span class="project3" id="projectThree">&#9679;</span>
         <span class="project4" id="projectFour">&#9679;</span>
@@ -358,7 +358,7 @@
               <div class="project-links">
                 <a
                   class="btn"
-                  href="https://sleepy-waters-84015.herokuapp.com/"
+                  href="http://sleepy-waters-84015.herokuapp.com/"
                   target="_blank"
                 >
                   Live look
@@ -472,7 +472,7 @@
                 </a>
                 <a
                   class="btn"
-                  href="https://github.com/blakeneely/giftasti"
+                  href="https://github.com/blakeneely/giftastic"
                   target="_blank"
                 >
                   <span class="icon">
@@ -505,6 +505,60 @@
         ></iframe>
       </div>
     </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+      <div class="contact-modal-content">
+        <!-- <span class="contactCloseBtn">&times;</span> -->
+        <div class="contact-popup">
+          <span class="contactCloseBtn">&times;</span>
+          <header class="modal-header">
+            <h2>Send me message</h2>
+          </header>
+          <div class="modal-body">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Name"
+                  id="name-input"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="example@example.com"
+                  id="email-input"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea" id="message-input"></textarea>
+              </div>
+            </div>
+          </div>
+          <footer class="contact-modal-footer">
+            <div class="field">
+              <div class="control">
+                <a class="btn" id="contact-submit"> Submit </a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
   </body>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="./assets/javascript/script.js"></script>
 </html>

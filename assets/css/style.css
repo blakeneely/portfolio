@@ -78,6 +78,94 @@ iframe {
   display: block;
 }
 
+/* Contact Modal */
+
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-modal-content {
+  margin: auto;
+  padding-right: 1em;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.contact-popup {
+  width: 600px;
+  height: 600px;
+  padding: 2em;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  position: relative;
+}
+
+.contact-popup header {
+  margin-bottom: 1em;
+}
+.contact-popup input {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  font-size: 1.2em;
+  color: #333;
+  /* border-style: 1px solid #fafafa; */
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+/* .contact-popup input:active {
+  border-style: 1px solid #fafafa;
+} */
+
+.contact-popup textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  outline: none;
+  padding: 0.5em 1em;
+}
+
+.contact-modal-footer a {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.contact-modal-footer a:hover,
+.contact-modal-footer a:focus,
+.contact-modal-footer a:active {
+  background-color: #09b2e4;
+  color: #333;
+}
+
+.contactCloseBtn {
+  font-size: 30px;
+  color: #09b2e4;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  float: right;
+  cursor: pointer;
+}
 .closeBtn {
   font-size: 30px;
   color: #09b2e4;
@@ -87,7 +175,10 @@ iframe {
 
 .closeBtn:hover,
 .closeBtn:focus,
-.closeBtn:active {
+.closeBtn:active,
+.contactCloseBtn:hover,
+.contactCloseBtn:focus,
+.contactCloseBtn:active {
   color: red;
 }
 
@@ -234,8 +325,8 @@ nav img {
   padding: 0.5em;
 }
 
-.left,
-.right {
+#leftArrow,
+#rightArrow {
   color: rgb(104, 102, 102);
   cursor: pointer;
   font-size: 2em;
