@@ -39,7 +39,6 @@ $(document).ready(function () {
 
   // Function to save new contact
   function saveContact() {
-    // event.preventDefault();
     let name = $('#name-input').val().trim();
     let email = $('#email-input').val().trim();
     let message = $('#message-input').val().trim();
@@ -55,8 +54,6 @@ $(document).ready(function () {
         email: email,
         message: message,
       };
-
-      console.log(newContact);
       database.ref().push(newContact);
     }
     $('#name-input').val('');
