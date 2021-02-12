@@ -15,7 +15,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   line-height: 1.5;
-  background-color: #fafafa;
+  background-color: #ddd;
 }
 
 h1,
@@ -94,7 +94,7 @@ iframe {
 
 .contact-modal-content {
   margin: auto;
-  padding-right: 1em;
+  padding: 1em;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -127,10 +127,6 @@ iframe {
   border-radius: 50px;
   outline: none;
 }
-
-/* .contact-popup input:active {
-  border-style: 1px solid #fafafa;
-} */
 
 .contact-popup textarea {
   width: 100%;
@@ -188,8 +184,8 @@ iframe {
   max-height: 450px;
   width: 100%;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
     ),
     url(../../assets/images/nashville2.png);
   background-position: center;
@@ -287,6 +283,94 @@ nav img {
 .about p {
   text-align: center;
   font-size: 1.2rem;
+}
+
+/* Services */
+
+.services-banner {
+  background-image: url(../images/handshake.jpeg);
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-banner-text p {
+  max-width: 700px;
+  text-align: center;
+  color: #fafafa;
+  text-shadow: 2px 2px #333;
+  font-size: 2.5em;
+  /* font-weight: 400; */
+}
+
+.services {
+  min-height: 600px;
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(to right top, #09b2e4, #8cdaf1);
+  color: #fafafa;
+  padding: 1em 1em 8em;
+  margin: auto;
+}
+
+.services-title {
+  margin: auto;
+  padding: 1em;
+}
+
+.services-title h1 {
+  text-align: center;
+}
+
+.services-list {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.service-card {
+  margin: 1em;
+  max-width: 300px;
+  height: 400px;
+  padding: 1em;
+  color: #333;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.288);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  -moz-backdrop-filter: blur(0.5rem);
+}
+
+.service-card span {
+  color: #09b2e4;
+}
+
+.service-card h2 {
+  padding: 0.5em;
+}
+
+.service-card p {
+  padding: 0 1em;
+  font-size: 1.1;
 }
 
 /* Projects */
@@ -426,6 +510,39 @@ nav img {
   align-self: center;
   transition: transform 0.3s ease-in-out;
 }
+
+/* Companies */
+.companies-container {
+  height: 600px;
+  margin-top: -50px;
+  background: linear-gradient(to right top, #09b2e4, #8cdaf1);
+  color: #fafafa;
+}
+
+.companies-title h1 {
+  padding: 3em 0 1em 1em;
+  text-align: center;
+}
+
+.companies {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+}
+
+.company {
+  height: auto;
+  width: 300px;
+}
+
+.company img {
+  height: auto;
+  width: 100%;
+  align-self: center;
+}
+
+/* Footer */
 
 footer {
   padding: 3em;
